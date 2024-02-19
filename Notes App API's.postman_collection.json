@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "a4dffa50-dca3-4094-b3d9-76ead392b4da",
+		"name": "Notes App API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17435228"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"buttonchicken\",\n    \"password\":\"hello123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/account/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"account",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Aditya\",\n    \"email\":\"aditya.mutharia@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/meeting/invest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"meeting",
+						"invest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Note",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA4MjgxNTcyLCJpYXQiOjE3MDgyODEyNzIsImp0aSI6IjBlOTAzZmM2NTQxNDRiNDU5YWUwOGU5ZmM1NzRiMWI5IiwidXNlcl9pZCI6MX0.W85AtpDiJJwGRo9Q2OF1pKm6lmhpGl9zccNfzJmQpNI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"note_data\":\"Do laundry\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/notes/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"notes",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Note",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA4MzgxOTE1LCJpYXQiOjE3MDgzODE2MTUsImp0aSI6ImEzMDgyZmJhNjliNjRkZTA5ZjljZGQ0ZDU0YTE2MzdlIiwidXNlcl9pZCI6MX0._8oztGOASzV1yrLS66xH9yQ9PSAO5MaTzOZhmb1Bwdo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"note_data\":\"Dhobi pachaaad\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/notes/edit/eee320c3-be1a-4b5e-846a-0ce69ee1a7b2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"notes",
+						"edit",
+						"eee320c3-be1a-4b5e-846a-0ce69ee1a7b2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Note",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Aditya\",\n    \"email\":\"aditya.mutharia@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/meeting/invest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"meeting",
+						"invest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Share Note",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA4MjgyODgzLCJpYXQiOjE3MDgyODI1ODMsImp0aSI6IjU3Yjk1MTVmZDVmNjQ3ZmM4MTkzYzNhNDhiYWQyNDcwIiwidXNlcl9pZCI6MX0.xkq5sFt1q94ai_BtJFDdkXt2Vo1NHfpITMbR75p3VAU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"note_id\":\"eee320c3-be1a-4b5e-846a-0ce69ee1a7b2\",\n    \"note_data\":\"Done washing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/notes/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"notes",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Version History",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Aditya\",\n    \"email\":\"aditya.mutharia@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/meeting/invest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"meeting",
+						"invest"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
